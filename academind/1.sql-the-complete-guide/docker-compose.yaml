@@ -1,0 +1,28 @@
+services:
+    mysqldb:
+        image: mysql
+        env_file: ./env/mysql.env
+        volumes:
+            - mysql_db:/var/lib/mysql
+
+
+    postgresdb:
+        image: postgres
+        env_file: ./env/postgres.env
+        volumes:
+            - postgres_db:/var/lib/postgresql/data
+volumes:
+    mysql_db:
+    postgres_db:
+
+
+#start: docker-compose up -d
+#connect to mysql
+# docker exec -it 1sql-the-complete-guide-mysqldb-1 sh   
+# mysql -uhomestead -psecret
+
+
+# connect to postgres
+# docker exec -it 1sql-the-complete-guide-postgresdb-1 sh    
+# psql -U pguser -d somedb
+
