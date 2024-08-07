@@ -4,17 +4,28 @@ services:
         env_file: ./env/mysql.env
         volumes:
             - mysql_db:/var/lib/mysql
-
+        networks:
+        - database_network
+        ports:
+        - "3306:3306"
 
     postgresdb:
         image: postgres
         env_file: ./env/postgres.env
         volumes:
             - postgres_db:/var/lib/postgresql/data
+        networks:
+        - database_network
+        ports:
+        - "5432:5432"
+
+    
 volumes:
     mysql_db:
     postgres_db:
 
+networks:
+  database_network:
 
 #start: docker-compose up -d
 #connect to mysql
