@@ -2,7 +2,7 @@
 
 CREATE TABLE sales(
     -- id INT PRIMARY KEY AUTO_INCREMENT, -- MySQL
-    id SERIAL PRIMARY KEY, --PostgreSQL
+    -- id SERIAL PRIMARY KEY, --PostgreSQL
 
     date_created DATE DEFAULT (CURRENT_DATE),
     date_fulfilled DATE,
