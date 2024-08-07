@@ -1,6 +1,6 @@
-DROP TABLE users;
-DROP TABLE employers;
-DROP TABLE conversations;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS employers;
+DROP TABLE IF EXISTS conversations;
 
 -- Postgresql
 -- CREATE TYPE employment_status AS  ENUM('employed', 'self-employed', 'unemployed');
