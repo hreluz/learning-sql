@@ -7,7 +7,8 @@
 -- ('Test street', '8A', 1),
 -- ('Evergreen street', '8 F3', 2),
 -- ('Wall street', '213', 3),
--- ('Green street', '999', 4);
+-- ('Green street', '999', 4),
+-- ('Washington street', '8A', 4);
 
 
 -- Users
