@@ -39,8 +39,10 @@ CREATE TABLE intranet_accounts (
 
 -- intermediate table => n:n
 CREATE TABLE projects_employees (
+    employee_id INT ,
     project_id INT REFERENCES projects(id) ON DELETE CASCADE,
-    employee_id INT REFERENCES employees(id) ON DELETE CASCADE
+    PRIMARY KEY(project_id, employee_id),
 
-    PRIMARY KEY(project_id, employee_id)
+    FOREIGN KEY (employee_id) REFERENCES employees ON DELETE CASCADE
+    -- FOREIGN KEY (project_id, employee_id) REFERENCES employees(eid, pid) ON DELETE
 );
